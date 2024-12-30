@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Harshvardhan Asnade - Developer and Designer">
+    <meta name="keywords" content="Portfolio, Web Developer, UI/UX Designer, Projects">
+    <meta name="author" content="Harshvardhan Asnade">
+    <title>Harshvardhan Asnade Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="android-chrome-192x192.png" alt="Logo" class="header-logo">
+        </div>
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="toggle" onclick="toggleDarkMode()">
+                <div class="slider"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div class="content">
+                <h1>
+                    <span class="hello">Hello!</span> <br>
+                    I'm <span class="typing-animation">Harshvardhan Asnade</span>
+                </h1>
+                <p>"I'm a developer skilled in C, C++, Python, Java, and web design, passionate about creating efficient programs and delivering exceptional user experiences."</p>
+                <a href="#contact" class="hire-me"> Contact Me</a>
+            </div>
+            <div class="image">
+                <img src="1.png" alt="Harshvardhan Asnade Profile Picture">
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="skills-list">
+                <div class="skill">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML & CSS</span>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-react"></i>
+                    <span>React.js</span>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-pencil-alt"></i>
+                    <span>UI/UX Design</span>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-node-js"></i>
+                    <span>Node.js</span>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-github"></i>
+                    <span>Git & GitHub</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>
+                    Hi! I'm Harshvardhan Asnade, a passionate programmer skilled in C, C++, Java, and Python. Experience in software development, I specialize in creating efficient algorithms, building robust applications, and solving complex problems through clean, structured code.
+
+                </p>
+                <p>
+                    When I'm not coding or designing, you can find me exploring the latest tech trends, diving into creative projects, or enjoying [I play games ,video edting , e.g., photography, hiking, etc.].
+                </p>
+                <a href="#contact" class="btn-primary">Get in Touch</a>
+            </div>
+            <div class="about-image">
+                <img src="mass-cashout-icon-vector-bicolor-flat-style_1151483-58616-removebg-preview.png" alt="About Me">
+            </div>
+        </section>
+        
+
+        <section id="portfolio" class="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+              <div class="portfolio-item" data-project="Project 1">
+                <img src="project1.jpg" alt="Project 1">
+                <div class="overlay">Project 1</div>
+              </div>
+              <div class="portfolio-item" data-project="Project 2">
+                <img src="project2.jpg" alt="Project 2">
+                <div class="overlay">Project 2</div>
+              </div>
+              <!-- Add more projects as needed -->
+            </div>
+          </section>
+        
+        
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Frontend Developer</h3>
+                <p><strong>Company:</strong> Tech Solutions Inc.</p>
+                <p><strong>Duration:</strong> Jan 2021 - Present</p>
+                <p>Worked on various projects, delivering high-quality and user-friendly web applications.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Web Designer</h3>
+                <p><strong>Company:</strong> Design Studio</p>
+                <p><strong>Duration:</strong> Aug 2018 - Dec 2020</p>
+                <p>Specialized in creating intuitive designs for websites and mobile applications.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to drop me a message or connect via my social platforms.</p>
+            
+            <div class="contact-wrapper">
+              <!-- Form Section -->
+              <div class="form-container">
+                <form id="contact-form" class="contact-form">
+                  <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                  </div>
+                  <div class="form-group">
+                    <i class="fas fa-comment"></i>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                  </div>
+                  <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+              </div>
+          
+              <!-- Contact Info Section -->
+              <div class="info-container">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-phone-alt"></i> +123 456 7890</p>
+                <p><i class="fas fa-envelope"></i> contact@yourdomain.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> City, Country</p>
+                
+                <h4>Follow Me</h4>
+                <div class="social-links">
+                  <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                  <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+    </main>
+
+    <script src="resume.js"></script>
+</body>
+
+</html>

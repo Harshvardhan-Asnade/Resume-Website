@@ -12,297 +12,98 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <style>
-        /* Updated Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/xxxxxxx.css">
 
-        .logo img {
-            height: 50px;
-            width: auto;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-            margin: 0;
-        }
-
-        nav ul li {
-            font-size: 1rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #3b82f6;
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        .toggle {
-            width: 60px;
-            height: 30px;
-            background-color: #eee;
-            border-radius: 15px;
-            padding: 5px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .toggle .slider {
-            width: 20px;
-            height: 20px;
-            background-color: #f1c40f;
-            border-radius: 50%;
-            transition: transform 0.3s ease;
-        }
-
-        body.dark-mode .toggle {
-            background-color: #333;
-        }
-
-        body.dark-mode .toggle .slider {
-            transform: translateX(30px);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-
-            nav ul {
-                display: none;
-                flex-direction: column;
-                gap: 10px;
-                background-color: #ffffff;
-                padding: 10px;
-                position: absolute;
-                top: 60px;
-                right: 10px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            }
-
-            nav ul.visible {
-                display: flex;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="logo">
             <img src="android-chrome-192x192.png" alt="Logo" class="header-logo">
         </div>
         <nav>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-            <ul id="menu">
+            <button class="menu-toggle" aria-label="Toggle Menu" onclick="toggleMenu()">☰</button>
+            <ul id="menu" class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#experience">Experience</a></li>
+                <li><a href="#experience-section">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="toggle" onclick="toggleDarkMode()">
-                <div class="slider"></div>
-            </div>
         </nav>
     </header>
 
-    <main id="home">
-        <section class="hero">
-            <div class="content">
-                <h1>
-                    <span class="hello">Hello!</span> <br>
-                    I'm <span class="typing-animation">Harshvardhan Asnade</span>
-                </h1>
-                <p>"I'm a developer skilled in C, C++, Python, Java, and web design, passionate about creating efficient programs and delivering exceptional user experiences."</p>
-                <a href="#contact" class="hire-me"> Contact Me</a>
-            </div>
-            <div class="image">
-                <img src="1.png" alt="Harshvardhan Asnade Profile Picture">
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="content">
+                    <h1>
+                        <span class="hello">Hello!</span><br>
+                        <span class="Im">I'm </span>
+                        <span class="typing-animation">Harshvardhan</span>
+                    </h1>
+                    <span class="note">"I'm a developer skilled in C, C++, Python, Java, and web design, passionate about creating efficient programs and delivering exceptional user experiences."</span>
+                   <br><br>
+                    <a href="#contact" class="center-button contact-me-btn">Contact Me</a>
+                </div>
+                <div class="image">
+                    <img src="1.png" alt="Harshvardhan Asnade Profile Picture">
+                </div>
             </div>
         </section>
     </main>
-
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('visible');
-        }
-
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-            const darkModeEnabled = document.body.classList.contains('dark-mode');
-            localStorage.setItem('dark-mode', darkModeEnabled ? 'enabled' : 'disabled');
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const darkMode = localStorage.getItem('dark-mode') === 'enabled';
-            if (darkMode) {
-                document.body.classList.add('dark-mode');
-            }
-        });
-    </script>
-</body>
-
-</html>
-
-
-        <section id="skills">
-            <h2>My Skills</h2>
-            <div class="skills-list">
-                <div class="skill">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML & CSS</span>
-                </div>
-                <div class="skill">
-                    <i class="fab fa-js-square"></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="skill">
-                    <i class="fab fa-react"></i>
-                    <span>React.js</span>
-                </div>
-                <div class="skill">
-                    <i class="fas fa-pencil-alt"></i>
-                    <span>UI/UX Design</span>
-                </div>
-                <div class="skill">
-                    <i class="fab fa-node-js"></i>
-                    <span>Node.js</span>
-                </div>
-                <div class="skill">
-                    <i class="fab fa-github"></i>
-                    <span>Git & GitHub</span>
-                </div>
-            </div>
-        </section>
-        
-        <section id="about">
-            <div class="about-content">
-                <h2>About Me</h2>
-                <p>
-                    Hi! I'm Harshvardhan Asnade, a passionate programmer skilled in C, C++, Java, and Python. Experience in software development, I specialize in creating efficient algorithms, building robust applications, and solving complex problems through clean, structured code.
-
-                </p>
-                <p>
-                    When I'm not coding or designing, you can find me exploring the latest tech trends, diving into creative projects, or enjoying [I play games ,video edting , e.g., photography, hiking, etc.].
-                </p>
-                <a href="#contact" class="btn-primary">Get in Touch</a>
-            </div>
-            <div class="about-image">
-                <img src="mass-cashout-icon-vector-bicolor-flat-style_1151483-58616-removebg-preview.png" alt="About Me">
-            </div>
-        </section>
-        
-
-        <section id="portfolio" class="portfolio">
-            <h2>Portfolio</h2>
-            <div class="portfolio-grid">
-              <div class="portfolio-item" data-project="Project 1">
-                <img src="project1.jpg" alt="Project 1">
-                <div class="overlay">Project 1</div>
-              </div>
-              <div class="portfolio-item" data-project="Project 2">
-                <img src="project2.jpg" alt="Project 2">
-                <div class="overlay">Project 2</div>
-              </div>
-              <!-- Add more projects as needed -->
-            </div>
-          </section>
-        
-        
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Frontend Developer</h3>
-                <p><strong>Company:</strong> Tech Solutions Inc.</p>
-                <p><strong>Duration:</strong> Jan 2021 - Present</p>
-                <p>Worked on various projects, delivering high-quality and user-friendly web applications.</p>
-            </div>
-            <div class="experience-item">
-                <h3>Web Designer</h3>
-                <p><strong>Company:</strong> Design Studio</p>
-                <p><strong>Duration:</strong> Aug 2018 - Dec 2020</p>
-                <p>Specialized in creating intuitive designs for websites and mobile applications.</p>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2>Contact Me</h2>
-            <p>Feel free to drop me a message or connect via my social platforms.</p>
-            
-            <div class="contact-wrapper">
-              <!-- Form Section -->
-              <div class="form-container">
-                <form id="contact-form" class="contact-form">
-                  <div class="form-group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                  </div>
-                  <div class="form-group">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-                  </div>
-                  <div class="form-group">
-                    <i class="fas fa-comment"></i>
-                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                  </div>
-                  <button type="submit" class="btn-submit">Send Message</button>
+    <section id="contact" class="contact-section">
+        <div class="contact-box">
+            <!-- Contact Me Box -->
+            <div class="box contact-me-box">
+                <h2>Contact Me</h2>
+                <p>If you'd like to get in touch, please fill out the form below and I'll get back to you as soon as possible!</p>
+                <form action="your-form-handling-script.php" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
                 </form>
-              </div>
-          
-              <!-- Contact Info Section -->
-              <div class="info-container">
-                <h3>Get in Touch</h3>
-                <p><i class="fas fa-phone-alt"></i> +123 456 7890</p>
-                <p><i class="fas fa-envelope"></i> contact@yourdomain.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> City, Country</p>
-                
-                <h4>Follow Me</h4>
-                <div class="social-links">
-                  <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                  <a href="https://www.linkedin.com/in/harshvardhan-asnade-225000344/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                  <a href="https://github.com/Harshvardhan-Asnade " target="_blank"><i class="fab fa-github"></i></a>
-                  <a href=" https://www.instagram.com/_harsh_07h?igsh=MXg1YTQwZDFkczJ2dw== " target="_blank"><i class="fab fa-instagram"></i></a>
-                </div>
-              </div>
             </div>
-          </section>
-          
-    </main>
-
-    <script src="resume.js"></script>
+    
+            <!-- Follow Me Box -->
+            <div class="box follow-me-box">
+                <h2>Follow Me</h2>
+                <ul class="social-links">
+                    <li><a href="https://www.linkedin.com/in/harshvardhan-asnade-225000344/" target="_blank" class="social-icon linkedin">
+                        <i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+                    </li>
+                    <li><a href="https://github.com/Harshvardhan-Asnade" target="_blank" class="social-icon github">
+                        <i class="fab fa-github"></i><span>GitHub</span></a>
+                    </li>
+                    <li><a href="https://harshvardhan-asnade.github.io/Resume-Website/" target="_blank" class="social-icon website">
+                        <i class="fas fa-globe"></i><span>Website</span></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/_harsh_07h?igsh=MXg1YTQwZDFkczJ2dw==" target="_blank" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i><span>Instagram</span></a>
+                    </li>
+                    <li><a href="tel:+919302875477" class="social-icon phone">
+                        <i class="fas fa-phone-alt"></i><span>Phone</span></a>
+                    </li>
+                    <li><a href="mailto:harshasnade1@gmail.com" class="social-icon email">
+                        <i class="fas fa-envelope"></i><span>Email</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <script src="resume.js"></script> <!-- Link to the external JS file -->
 </body>
 
 </html>

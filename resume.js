@@ -33,3 +33,13 @@ function toggleDescription(jobId) {
 document.querySelectorAll('.job-description').forEach((description) => {
     description.style.display = "none";
 });
+// Smooth scrolling to internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});

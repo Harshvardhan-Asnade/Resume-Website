@@ -1,18 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const textElement = document.querySelector(".typing-animation");
-    const text = "Harshvardhan";
-    let index = 0;
 
-    function type() {
-        if (index < text.length) {
-            textElement.textContent += text.charAt(index);
-            index++;
-            setTimeout(type, 150); // Adjust typing speed here
-        }
-    }
-
-    type();
-});
 function toggleDescription(jobId) {
     const jobDescription = document.getElementById(jobId).querySelector('.job-description');
     const button = document.getElementById(jobId).querySelector('.show-more');

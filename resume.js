@@ -1,4 +1,4 @@
-
+ 
 function toggleDescription(jobId) {
     const jobDescription = document.getElementById(jobId).querySelector('.job-description');
     const button = document.getElementById(jobId).querySelector('.show-more');

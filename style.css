@@ -52,7 +52,6 @@ header .menu-toggle {
     font-size: 1.5rem;
     cursor: pointer;
 }
-
 .hero-container {
     display: flex;
     align-items: center;
@@ -66,6 +65,7 @@ header .menu-toggle {
     flex: 1;
     max-width: 50%;
     text-align: left;
+    padding: 1rem;
 }
 
 .image {
@@ -73,12 +73,49 @@ header .menu-toggle {
     max-width: 50%;
     display: flex;
     justify-content: flex-end;
+    padding: 1rem;
 }
 
 .image img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .image {
+        max-width: 100%;
+        justify-content: center;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .content p {
+        font-size: 1rem; /* Adjust font size for readability */
+    }
+
+    .contact-me-btn {
+        padding: 0.5rem 1rem;
+        font-size: 1rem; /* Ensure buttons are easily clickable */
+    }
 }
 
 /* Typography Customization for "Hello! I'm Harshvardhan" */

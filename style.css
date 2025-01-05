@@ -5,7 +5,6 @@ body {
     padding: 0;
     transition: background-color 0.3s, color 0.3s;
 }
-
 header {
     display: flex;
     justify-content: space-between;
@@ -52,6 +51,41 @@ header .menu-toggle {
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+/* Mobile view */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    header nav ul li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    header nav ul li a {
+        width: 100%;
+        padding: 10px;
+    }
+
+    header .menu-toggle {
+        display: block;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+}
+
 .hero-container {
     display: flex;
     align-items: center;
@@ -135,10 +169,26 @@ header .menu-toggle {
 
 .typing-animation {
     font-family: 'Gilroy', sans-serif; /* Assuming Gilroy is loaded */
-    font-size: 5rem;
+    font-size: 5rem; /* Default font size */
     font-weight: bold; /* Bold weight applied to Harshvardhan */
     color: #000055; /* Blue color for emphasis */
+    display: inline-block;
+    white-space: nowrap;
 }
+
+/* Mobile-friendly font-size adjustments */
+@media (max-width: 768px) {
+    .typing-animation {
+        font-size: 4rem; /* Slightly smaller font on tablets and smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .typing-animation {
+        font-size: 3rem; /* Further smaller font on mobile screens */
+    }
+}
+
 .note {
     font-family: 'Gilroy', sans-serif; /* Assuming Gilroy is loaded */
     font-size: 1rem;

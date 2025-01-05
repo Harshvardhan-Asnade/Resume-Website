@@ -36,14 +36,15 @@ function toggleMenu() {
 // Toggle menu visibility
 function toggleMenu() {
     const menu = document.getElementById('menu');
-    menu.classList.toggle('active');
+    menu.classList.toggle('active'); // Toggle the active class to show/hide the menu
 }
 
 // Close the menu when a link is clicked
-const menuLinks = document.querySelectorAll('#menu li a');
-menuLinks.forEach(link => {
+document.querySelectorAll('#menu li a').forEach(link => {
     link.addEventListener('click', () => {
         const menu = document.getElementById('menu');
-        menu.classList.remove('active'); // Hide the menu after a link is clicked
+        if (menu.classList.contains('active')) {
+            menu.classList.remove('active'); // Remove the active class to hide the menu
+        }
     });
 });

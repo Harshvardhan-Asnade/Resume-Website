@@ -108,10 +108,12 @@ header .menu-toggle {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 4rem;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
+    margin-top: 70px; /* Adds gap between header and hero section */
 }
+
 
 .content {
     flex: 1;
@@ -172,26 +174,24 @@ header .menu-toggle {
 
 /* Typography Customization for "Hello! I'm Harshvardhan" */
 .hello {
-    font-family: 'Playfair Display', serif;
-    font-size: 5rem;
-    font-weight: 700;
-    color: #000000;
-}
-
-.Im {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gilroy', sans-serif; /* Assuming Gilroy is loaded */
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 750;
     color: #000000;
 }
 
 .typing-animation {
     font-family: 'Gilroy', sans-serif; /* Assuming Gilroy is loaded */
-    font-size: 5rem; /* Default font size */
+    font-size: 4rem; /* Default font size */
     font-weight: bold; /* Bold weight applied to Harshvardhan */
     color: #000055; /* Blue color for emphasis */
-    display: inline-block;
+    font-weight: 750;
+    display: inline-block;  
     white-space: nowrap;
+}
+
+.highlight {
+    color: black; /* Changes the color of "I'm" to black */
 }
 
 /* Mobile-friendly font-size adjustments */
@@ -571,7 +571,9 @@ body {
     background-color: #f4f4f4;
     color: #333;
     text-align: center;
+    margin-top: 50px; /* Adds space between hero section and skills section */
 }
+
 
 .skills-box h2 {
     font-size: 2.5rem;

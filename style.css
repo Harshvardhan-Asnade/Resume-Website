@@ -289,8 +289,8 @@ header .menu-toggle {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Montserrat', sans-serif;
+    background: #000055; /* Light gradient background */
     color: #333;
 }
 
@@ -299,52 +299,66 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 4rem 2rem;
-    background-color: #f4f4f4;
+    padding: 3rem 1.5rem;
+    background: linear-gradient(135deg, #f0f8ff, #dce3f0); /* Light gradient */
 }
 
 .contact-box {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Wrap for smaller screens */
     gap: 2rem;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
 }
 
-/* Common Box Styling */
+/* Common Box Styling with Glassmorphism */
 .box {
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
 }
 
 /* Contact Me Box */
 .contact-me-box {
-    background-color: #000055; /* Dark Blue */
-    color: #fff; /* White Text */
+    background: linear-gradient(135deg, #000055, #000055); /* Blue gradient */
+    color: #fff;
 }
 
-.contact-me-box h2, .follow-me-box h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+.contact-me-box h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .contact-me-box p {
-    font-size: 1.1rem;
-    color: #ddd; /* Light Grey Text */
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
+/* Contact Form */
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .contact-form .form-group {
@@ -354,56 +368,69 @@ body {
 }
 
 .contact-form label {
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.4rem;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 0.8rem;
     font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: none;
+    border-radius: 10px;
+    background: #f0f4f8;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+    outline: none;
 }
 
 .contact-form textarea {
-    height: 150px;
+    height: 120px;
     resize: vertical;
 }
 
 .submit-btn {
-    background-color:#000055;
+    background: linear-gradient(135deg, #000055, #000055);
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     padding: 0.8rem 1.5rem;
     border: none;
-    border-radius: 30px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    align-self: flex-start;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .submit-btn:hover {
-    background-color: #000055;
+    background: linear-gradient(135deg, #3b82f6, #000055);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(59, 130, 246, 0.4);
 }
 
 /* Follow Me Box */
 .follow-me-box {
-    background-color: #000055; /* A Slightly Lighter Blue */
-    color: #fff; /* White Text */
+    background: linear-gradient(135deg, #000050, #000055);
+    color: #fff;
 }
 
 .follow-me-box h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
+/* Social Links with Colorful Icons */
 .social-links {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction:  column;
     gap: 1rem;
     padding: 0;
 }
@@ -411,55 +438,58 @@ body {
 .social-links .social-icon {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    font-size: 1.8rem;
+    gap: 1rem;
+    font-size: 2rem;
     color: #fff;
     text-decoration: none;
-    transition: transform 0.3s, color 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
 }
 
 .social-links .social-icon i {
-    font-size: 2.5rem; /* Increased icon size */
+    font-size: 2rem; /* Icon size */
 }
 
 .social-links .social-icon span {
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Compact text size */
     font-weight: 500;
 }
 
+.social-links .social-icon.linkedin {
+    background: #0077b5;
+}
+
+.social-links .social-icon.github {
+    background: #08040c;
+}
+
+.social-links .social-icon.website {
+    background: #6c757d;
+}
+
+.social-links .social-icon.instagram {
+    background: #f50606;
+}
+
+.social-links .social-icon.phone {
+    background: #34b7f1;
+}
+
+.social-links .social-icon.email {
+    background: #f39c12;
+}
+
 .social-links .social-icon:hover {
-    transform: scale(1.1); /* Slight enlargement on hover */
-}
-
-/* Colorful Icon Hover Effects */
-.social-links .social-icon.linkedin:hover {
-    color: #0077b5;
-}
-
-.social-links .social-icon.github:hover {
-    color: #333;
-}
-
-.social-links .social-icon.website:hover {
-    color: #000000;
-}
-
-.social-links .social-icon.instagram:hover {
-    color: #e4405f;
-}
-
-.social-links .social-icon.phone:hover {
-    color: #34b7f1;
-}
-
-.social-links .social-icon.email:hover {
-    color: #f39c12;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .contact-box {
         flex-direction: column;
+        gap: 2rem;
     }
 
     .box {
@@ -467,13 +497,15 @@ body {
     }
 
     .social-links .social-icon {
-        font-size: 1.5rem; /* Decrease icon size for smaller screens */
+        font-size: 1.2rem;
+        padding: 0.5rem 0.8rem;
     }
 
     .social-links .social-icon i {
-        font-size: 2rem; /* Decrease icon size for smaller screens */
+        font-size: 1.8rem;
     }
 }
+
 /* Importing Montserrat font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
@@ -488,6 +520,7 @@ body {
     font-family: 'Montserrat', sans-serif;  /* Changed font to Montserrat */
     min-height: 100vh;
     text-align: center;
+    flex-wrap: wrap;  /* Ensures items don't overflow on smaller screens */
 }
 
 /* About Content Styling */
@@ -557,8 +590,21 @@ body {
         width: 90%;
         max-width: 320px;
     }
+
+    .about-content h2 {
+        font-size: 2rem; /* Slightly smaller font for smaller screens */
+    }
+
+    .about-content p {
+        font-size: 1rem; /* Slightly smaller font for readability */
+    }
+
+    .btn-primary {
+        font-size: 0.9rem; /* Adjust button font size */
+        padding: 10px 25px; /* Adjust padding for better fit */
+    }
 }
-    
+
 /* Skills Section Styling */
 .skill i {
     font-size: 70px; /* Increased size of each icon */
@@ -569,7 +615,7 @@ body {
 .skills-box {
     padding: 100px 20px;
     background-color: #f4f4f4;
-    color: #000050;
+    color: #000000;
     text-align: center;
     margin-top: 50px; /* Adds space between hero section and skills section */
 }

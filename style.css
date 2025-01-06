@@ -108,7 +108,7 @@ header .menu-toggle {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 4rem;
+    padding: 2rem;
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 50px; /* Adds gap between header and hero section */
@@ -567,7 +567,7 @@ body {
 }
 
 .skills-box {
-    padding: 70px 20px;
+    padding: 100px 20px;
     background-color: #f4f4f4;
     color: #333;
     text-align: center;

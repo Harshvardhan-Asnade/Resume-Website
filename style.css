@@ -474,107 +474,78 @@ body {
         font-size: 2rem; /* Decrease icon size for smaller screens */
     }
 }
-/* About Section Styles */
+/* Importing Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* About Section Styling */
 #about {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 80px 20px;
-    background-color: #f0f4f8; /* Keeping the original background color */
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;  /* Light background */
     color: #333;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;  /* Changed font to Montserrat */
     min-height: 100vh;
-    border-radius: 15px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
+/* About Content Styling */
 .about-content {
-    flex: 1;
-    max-width: 600px;
-    margin-right: 40px;
-    animation: fadeIn 1.2s ease-in-out;
+    max-width: 700px;
+    margin-right: 30px;
 }
 
+/* Heading Styling */
 .about-content h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 600;
     color: #333;
     margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Paragraph Styling */
 .about-content p {
-    font-size: 1.3rem;
-    line-height: 1.8;
+    font-size: 1.2rem;
+    line-height: 1.6;
     margin-bottom: 20px;
     color: #555;
-    max-width: 550px;
-    margin-bottom: 30px;
 }
 
-.about-content p:last-child {
-    margin-bottom: 30px;
-}
-
+/* Button Styling */
 .btn-primary {
     display: inline-block;
-    padding: 14px 30px;
+    padding: 12px 30px;
     background-color: #000050;
     color: white;
     text-decoration: none;
-    border-radius: 50px;
-    font-size: 1.1rem;
+    border-radius: 30px;
+    font-size: 1rem;
     text-transform: uppercase;
     font-weight: bold;
-    letter-spacing: 1px;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 4px 8px rgba(255, 87, 34, 0.3);
 }
 
 .btn-primary:hover {
-    background-color: #000055;
-    transform: translateY(-5px);
+    background-color: #003366;
 }
 
+/* Image Styling */
 .about-image {
-    flex: 1;
-    text-align: center;
-    animation: fadeIn 1.2s ease-in-out 0.5s;
+    margin-left: 30px;
 }
 
 .about-image img {
-    width: 90%;
+    width: 100%;
     max-width: 380px;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.about-image img:hover {
-    transform: scale(1.1);
-}
-
-/* Animation for fade-in effect */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     #about {
         flex-direction: column;
-        text-align: center;
-        padding: 60px 20px;
-        border-radius: 10px;
-        box-shadow: none;
+        padding: 40px 20px;
     }
 
     .about-content {
@@ -583,10 +554,11 @@ body {
     }
 
     .about-image img {
-        width: 80%;
+        width: 90%;
         max-width: 320px;
     }
 }
+    
 /* Skills Section Styling */
 .skill i {
     font-size: 70px; /* Increased size of each icon */

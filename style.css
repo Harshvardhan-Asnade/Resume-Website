@@ -658,12 +658,14 @@ body {
 /* Projects Section Styling */
 .projects-box {
     padding: 80px 20px;
-    background-color: #fff; /* Keeping original background */
+    background-color: #ffffff;
     color: #333;
     text-align: center;
     margin-top: 50px;
-    border-top: 5px solid #007bff; /* Primary blue border */
+    border-top: 5px solid #007bff;
     border-bottom: 5px solid #007bff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    border-radius: 15px; /* Rounded corners */
 }
 
 .projects-box h2 {
@@ -685,7 +687,7 @@ body {
     transform: translateX(-50%);
     width: 80px;
     height: 5px;
-    background-color: #007bff; /* Dark blue accent */
+    background-color: #007bff;
 }
 
 /* Project Container */
@@ -700,22 +702,22 @@ body {
 /* Project Card Styling */
 .project {
     width: 100%;
-    background-color: #ffffff; /* White cards for contrast */
-    border-radius: 15px; /* Rounded corners */
+    background-color: #ffffff;
+    border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease;
     overflow: hidden;
     position: relative;
-    background-color: #f7f7f7; /* Light gray card background */
+    background-color: #f7f7f7;
 }
 
 .project:hover {
     transform: translateY(-15px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    background-color: #e6f1ff; /* Light blue on hover */
-    border: 2px solid #0056b3; /* Darker blue border on hover */
+    background-color: #e6f1ff;
+    border: 2px solid #0056b3;
 }
 
 /* Project Heading */
@@ -735,7 +737,7 @@ body {
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: #007bff; /* Dark blue underline */
+    background-color: #007bff;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
@@ -756,7 +758,7 @@ body {
 .project a {
     display: inline-block;
     padding: 12px 25px;
-    background-color: #007bff; /* Dark blue button */
+    background-color: #007bff;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -776,7 +778,7 @@ body {
 }
 
 .project a:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
     transform: scale(1.05);
 }
 
@@ -784,7 +786,14 @@ body {
     transform: translateY(-50%) translateX(5px);
 }
 
-/* Adding media query for responsive design */
+/* Icon Styling */
+.project-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .projects-box h2 {
         font-size: 2.5rem;
@@ -798,6 +807,7 @@ body {
         font-size: 0.9rem;
     }
 }
+
 /* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;

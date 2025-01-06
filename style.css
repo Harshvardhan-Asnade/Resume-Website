@@ -676,27 +676,28 @@ body {
 }
 
 /* Projects Section Styling */
+/* Projects Section Styling */
 .projects-box {
-    padding: 80px 20px;
+    padding: 30px 10px; /* Reduced padding */
     background-color: #ffffff;
     color: #333;
     text-align: center;
-    margin-top: 50px;
-    border-top: 5px solid #007bff;
-    border-bottom: 5px solid #007bff;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-    border-radius: 15px; /* Rounded corners */
+    margin-top: 50px; /* Reduced top margin */
+    border-top: 1px solid #000055;
+    border-bottom: 1px solid #000055;
+    box-shadow: 0 10px 20px #000055; 
+    border-radius: 15px; 
 }
 
 .projects-box h2 {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Reduced font size */
     font-weight: 700;
-    margin-bottom: 40px;
+    margin-bottom: 30px; /* Reduced bottom margin */
     color: #333;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 15px; /* Reduced padding */
 }
 
 .projects-box h2::after {
@@ -705,7 +706,7 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 60px; /* Reduced width */
     height: 5px;
     background-color: #007bff;
 }
@@ -713,10 +714,10 @@ body {
 /* Project Container */
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjusted min-width */
+    gap: 20px; /* Reduced gap */
     justify-items: center;
-    margin-top: 40px;
+    margin-top: 0px; /* Reduced margin */
 }
 
 /* Project Card Styling */
@@ -725,7 +726,7 @@ body {
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 20px; /* Reduced padding */
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease;
     overflow: hidden;
@@ -734,7 +735,7 @@ body {
 }
 
 .project:hover {
-    transform: translateY(-15px);
+    transform: translateY(-10px); /* Reduced hover effect */
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
     background-color: #e6f1ff;
     border: 2px solid #0056b3;
@@ -742,10 +743,10 @@ body {
 
 /* Project Heading */
 .project h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem; /* Reduced font size */
     font-weight: bold;
     color: #333;
-    margin-bottom: 15px;
+    margin-bottom: 5px; /* Reduced bottom margin */
     position: relative;
     letter-spacing: 1px;
 }
@@ -769,7 +770,7 @@ body {
 /* Project Description */
 .project p {
     font-size: 1rem;
-    margin: 15px 0;
+    margin: 10px 0; /* Reduced margin */
     color: #666;
     line-height: 1.4;
 }
@@ -777,13 +778,13 @@ body {
 /* Button Styling */
 .project a {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 10px 20px; /* Reduced padding */
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 10px; /* Reduced margin */
     transition: background-color 0.3s ease, transform 0.3s ease;
     position: relative;
 }
@@ -794,7 +795,7 @@ body {
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Smaller arrow */
 }
 
 .project a:hover {
@@ -808,25 +809,26 @@ body {
 
 /* Icon Styling */
 .project-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
+    width: 50px; /* Reduced icon size */
+    height: 50px;
+    margin-bottom: px; /* Reduced bottom margin */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .projects-box h2 {
-        font-size: 2.5rem;
+        font-size: 2rem; /* Smaller font size on smaller screens */
     }
 
     .project h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem; /* Reduced font size */
     }
 
     .project p {
         font-size: 0.9rem;
     }
 }
+
 
 /* Global Styles */
 body {
